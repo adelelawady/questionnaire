@@ -1,0 +1,53 @@
+{
+  "name": "Answer",
+  "fields": [
+    {
+      "fieldName": "content",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "votesUp",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "votesDown",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "applicationUser",
+      "otherEntityRelationshipName": "answers",
+      "relationshipName": "owner",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "question",
+      "otherEntityRelationshipName": "answers",
+      "relationshipName": "question",
+      "otherEntityField": "id",
+      "ownerSide": false
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "comment",
+      "otherEntityRelationshipName": "answer",
+      "relationshipName": "comment",
+      "otherEntityField": "id",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20201201134925",
+  "entityTableName": "answer",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

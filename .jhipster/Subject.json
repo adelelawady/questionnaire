@@ -1,0 +1,37 @@
+{
+  "name": "Subject",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "applicationUser",
+      "otherEntityRelationshipName": "subjects",
+      "relationshipName": "creator",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "question",
+      "otherEntityRelationshipName": "subject",
+      "relationshipName": "question",
+      "otherEntityField": "id",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20201201134725",
+  "entityTableName": "subject",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

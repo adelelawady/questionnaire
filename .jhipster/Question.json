@@ -1,0 +1,73 @@
+{
+  "name": "Question",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "content",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "views",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "likes",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "answerd",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "bestAnswerId",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "answer",
+      "otherEntityRelationshipName": "question",
+      "relationshipName": "answers",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "subject",
+      "otherEntityRelationshipName": "question",
+      "relationshipName": "subject",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "applicationUser",
+      "otherEntityRelationshipName": "questions",
+      "relationshipName": "owner",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-many",
+      "otherEntityName": "comment",
+      "otherEntityRelationshipName": "question",
+      "relationshipName": "comment",
+      "otherEntityField": "id",
+      "ownerSide": false
+    }
+  ],
+  "changelogDate": "20201201134825",
+  "entityTableName": "question",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

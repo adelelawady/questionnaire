@@ -1,0 +1,30 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="applicationUser">
+            <h2><span jhiTranslate="questionnaireApp.applicationUser.detail.title">Application User</span> {{ applicationUser.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="questionnaireApp.applicationUser.internalUser">Internal User</span></dt>
+                <dd>
+                    {{ applicationUser.internalUserId }}
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/application-user', applicationUser.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

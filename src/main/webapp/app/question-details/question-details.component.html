@@ -1,0 +1,173 @@
+
+  <!-- =-=-=-=-=-=-= Main Area =-=-=-=-=-=-= -->
+  <div class="main-content-area">
+
+    <!-- =-=-=-=-=-=-= Page Breadcrumb =-=-=-=-=-=-= -->
+    <section class="page-title">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-7 co-xs-12 text-left">
+            <h1>Question Detial</h1>
+          </div>
+          <!-- end col -->
+          <div class="col-md-6 col-sm-5 co-xs-12 text-right">
+
+            <!-- end bread -->
+          </div>
+          <!-- end col -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </section>
+
+    <!-- =-=-=-=-=-=-= Page Breadcrumb End =-=-=-=-=-=-= -->
+
+    <!-- =-=-=-=-=-=-= Question Details =-=-=-=-=-=-= -->
+
+    <section class="section-padding-80 white question-details">
+      <div class="container">
+        <!-- Row -->
+        <div class="row">
+          <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+            <!-- Question Detail -->
+
+            <!-- Question Listing -->
+            <div class="listing-grid ">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <h3><a href="#"> {{question?.title}} </a></h3>
+                  <div class="listing-meta"> <span><i class="fa fa-clock-o" aria-hidden="true"></i>8 mintes ago</span> <span><i class="fa fa fa-eye" aria-hidden="true"></i> 750 Views</span> </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <p> {{question?.content}}</p>
+                    <div class="tagcloud">  <a *ngFor="let item of question?.subjects"  href="">{{item.name}}</a> </div>
+                </div>
+              </div>
+            </div>
+            <!-- Question Listing End -->
+
+            <div class="clearfix"></div>
+            <!-- Thread Reply -->
+            <div class="thread-reply">
+              <h2>Thread Reply </h2>
+
+              <!-- Reply Grid -->
+              <div class="media-block card-box ribbon-content">
+                <div class="ribbon base"><span>Correct Answer</span>
+                </div>
+
+                <div class="media-left">
+                  <a data-toggle="tooltip" data-placement="bottom" data-original-title="Martina Jaz" href="#">
+                    <img class="img-sm" alt="Profile Picture" src="/content/images/authors/9.jpg">
+
+                  </a>
+
+                </div>
+                <div class="media-body">
+                  <div class="mar-btm">
+                    <h4><a href="#" class="btn-link text-semibold media-heading box-inline">Muhammad Umair</a></h4>
+                    <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 11 min ago</p>
+                  </div>
+                  <p>I think this is what you are looking for. You need to remove the <code>float: left</code> from the inner nav to center it and make it a inline-block.</p>
+                  <pre class="brush: php syntaxhighlight">
+
+                                </pre>
+                  <p><strong>Edit: </strong>if you only want this effect to happen when the nav isn't collapsed surround it in the appropriate media query.</p>
+                  <pre class="brush: php syntaxhighlight">
+
+                                </pre>
+                  <div class="pad-ver pull-right">
+
+                    <a class="btn btn-sm btn-default btn-hover-success" data-toggle="tooltip" data-placement="bottom" data-original-title="Like This Answer" href="#"><i class="fa fa-thumbs-up"></i></a>
+                    <a class="btn btn-sm btn-default btn-hover-danger" href="#" data-original-title="Spam" data-placement="bottom" data-toggle="tooltip"><i class="fa fa-thumbs-down"></i></a>
+
+                  </div>
+
+                </div>
+              </div>
+              <!-- Reply Grid End -->
+              <!-- Reply Grid -->
+              <div class="media-block card-box ">
+
+                <div class="media-left">
+                  <a href="#">
+                    <img class="img-sm" alt="Profile Picture" src="/content/images/authors/7.jpg">
+
+                  </a>
+
+                </div>
+                <div class="media-body">
+                  <div class="mar-btm">
+                    <h4><a href="#" class="btn-link text-semibold media-heading box-inline">Martina Jaz</a></h4>
+                    <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 21 min ago</p>
+                  </div>
+                  <p>I think this is what you are looking for. You need to remove the <code>float: left</code> from the inner nav to center it and make it a inline-block.</p>
+                  <pre class="brush: php syntaxhighlight">
+
+                                </pre>
+                  <div class="pad-ver pull-right">
+
+                    <a class="btn btn-sm btn-default btn-hover-success" data-toggle="tooltip" data-placement="bottom" data-original-title="Like This Answer" href="#"><i class="fa fa-thumbs-up"></i></a>
+                    <a class="btn btn-sm btn-default btn-hover-danger" href="#" data-original-title="Spam" data-placement="bottom" data-toggle="tooltip"><i class="fa fa-thumbs-down"></i></a>
+
+                    <a class="btn btn-sm btn-default btn-hover-primary" href="#">Mark As Correct</a>
+                  </div>
+
+                </div>
+              </div>
+              <!-- Reply Grid End -->
+              <!-- Reply Grid -->
+              <div class="media-block card-box ">
+
+                <div class="media-left">
+                  <a href="#">
+                    <img class="img-sm" alt="Profile Picture" src="/content/images/authors/6.jpg">
+
+                  </a>
+
+                </div>
+                <div class="media-body">
+                  <div class="mar-btm">
+                    <h4><a href="#" class="btn-link text-semibold media-heading box-inline">John Doe</a></h4>
+                    <p class="text-muted text-sm"><i class="fa fa-mobile fa-lg"></i> - From Mobile - 40 min ago</p>
+                  </div>
+                  <p>I think this is what you are looking for. You need to remove the <code>float: left</code> from the inner nav to center it and make it a inline-block.</p>
+                  <pre class="brush: php syntaxhighlight">
+                            </pre>
+                  <div class="pad-ver pull-right">
+
+                    <a class="btn btn-sm btn-default btn-hover-success" data-toggle="tooltip" data-placement="bottom" data-original-title="Like This Answer" href="#"><i class="fa fa-thumbs-up"></i></a>
+                    <a class="btn btn-sm btn-default btn-hover-danger" href="#" data-original-title="Spam" data-placement="bottom" data-toggle="tooltip"><i class="fa fa-thumbs-down"></i></a>
+
+                    <a class="btn btn-sm btn-default btn-hover-primary" href="#">Mark As Correct</a>
+                  </div>
+
+                </div>
+              </div>
+              <!-- Reply Grid End -->
+
+              <div class="clearfix"></div>
+
+              <form>
+                <div class="form-group">
+                  <label>Post Your Answer</label>
+                  <textarea cols="12" rows="7" class="form-control" placeholder="I Have The Aswert"></textarea>
+                </div>
+
+                <button class="btn btn-primary btn-lg btn-block">Post Your Answer</button>
+
+              </form>
+
+            </div>
+            <!-- Thread Reply End -->
+          </div>
+
+        </div>
+        <!-- Row End -->
+      </div>
+    </section>
+    <!-- =-=-=-=-=-=-= Question Details end =-=-=-=-=-=-= -->
+
+  </div>
+  <!-- =-=-=-=-=-=-= Main Area End =-=-=-=-=-=-= -->
