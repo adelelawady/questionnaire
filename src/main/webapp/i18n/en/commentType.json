@@ -1,0 +1,10 @@
+{
+  "questionnaireApp": {
+    "CommentType": {
+      "null": "",
+      "Answer": "Answer",
+      "Question": "Question",
+      "Post": "Post"
+    }
+  }
+}

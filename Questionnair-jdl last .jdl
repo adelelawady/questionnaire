@@ -1,0 +1,60 @@
+
+entity ApplicationUser {
+}
+
+relationship OneToOne {
+  ApplicationUser{internalUser} to User
+}
+
+entity Subject {
+	id String,
+	name String
+}
+entity Question {
+	id String,
+	title String,
+    content String,
+    views Integer,
+    likes Integer
+    answerd Boolean,
+    bestAnswerId String,
+    
+}
+
+entity Answer {
+	id String,
+    content String
+    votesUp Integer,
+    votesDown Integer,
+}
+
+entity Comment {
+	name String,
+    commentType CommentType,
+    refQuestionId String, //.question. or answer id
+}
+
+enum CommentType {
+    Answer, Question, Post
+}
+
+relationship OneToOne {
+    Question{subject} to Subject
+}
+relationship OneToMany {
+    ApplicationUser{comments} to Comment{owner}
+    ApplicationUser{subjects} to Subject{creator}
+    ApplicationUser{questions} to Question{owner}
+    ApplicationUser{answers} to Answer{owner}
+    Question{answers} to Answer{question}
+}
+relationship ManyToMany{
+    Comment{answer} to Answer{comment}
+    Comment{question} to Question{comment}
+}
+
+paginate all with infinite-scroll
+
+service all with serviceImpl
+
+dto * with mapstruct
